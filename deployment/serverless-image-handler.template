@@ -63,6 +63,9 @@ Parameters:
     Description: A CNAME to associate with the cloudfront distribution bucket
     Default: images.mydomain.com
     Type: String
+  CloudFrontCertARN:
+    Description: The ARN of the certificate used for any cname aliases on cloudfront
+    Type: String
 
 Metadata:
   AWS::CloudFormation::Interface:
@@ -84,6 +87,14 @@ Metadata:
           default: Event Logging
         Parameters:
           - LogRetentionPeriod
+      - Label:
+          default: CF CNAME
+        Parameters:
+          - CloudFrontCNAME
+      - Label:
+          default: ACM Arn
+        Parameters:
+          - CloudFrontCertARN
 Conditions:
   DeployDemoUICondition: !Equals
     - !Ref 'DeployDemoUI'
