@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Added CloudFrontCNAME, CloudFrontCertARN parameters
+- Added `Environment` parameter for adding `env` tags created resources.
 
 ## [4.1] - 2019-12-31
 ### Added
